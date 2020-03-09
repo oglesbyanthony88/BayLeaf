@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 	
-Recipe.delete_all
-Ingredient.delete_all
-Instruction.delete_all
+# Recipe.delete_all
+# Ingredient.delete_all
+# Instruction.delete_all
 
 Recipe.create([{title: "Roasted Broccoli Pasta with Lemon and Feta", description: "This Roasted Broccoli Pasta with Lemon and Feta is just buttered pasta with charred oven roasted broccoli, steak seasoning, bright lemon, and salty feta."},
 							{title: "Spinach and Artichoke Wonderpot", description: "This Spinach and Artichoke Wonderpot is like, the easiest, tastiest “dinner in 30 minutes” meal!"},
 							{title: "Mushroom and Spinach Pasta with Ricotta", description: "This Mushroom and Spinach Pasta with Ricotta is still an incredibly simple and delicious pasta dish, perfect for those nights when you want something special, but not complicated."}])
 
 										# Roasted Broccoli Pasta with Lemon and Feta
-Ingredient.create([{item: "Broccoli", amount: "1 lb", recipe_id:1},
+Ingredient.create([{item: "Broccoli", amount: "1 lb", recipe_id: 1},
 									{item: "Olive Oil", amount: "1 Tbsp", recipe_id: 1},
 									{item: "Steak Seasoning", amount: "1 tsp", recipe_id: 1},
 									{item: "Lemon", amount: "1", recipe_id: 1},
