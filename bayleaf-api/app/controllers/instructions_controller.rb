@@ -1,5 +1,10 @@
 class InstructionsController < ApplicationController
 
+	def index
+		instructions = Instruction.all
+		render json: InstructionSerializer.new(instructions)
+	end
+
 private
 
 def instruction_params
