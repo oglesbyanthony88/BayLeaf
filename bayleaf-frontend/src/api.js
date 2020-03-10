@@ -24,7 +24,6 @@ class Api {
 		.then(resObj => {
 			resObj.data.forEach(ingObj => {
 				let sanitized = {...ingObj.attributes, id: ingObj.id, recipeId: ingObj.relationships.recipe.data.id}
-				
 				new Ingredient(sanitized)
 			})
 		})
