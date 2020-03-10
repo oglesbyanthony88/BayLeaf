@@ -2,16 +2,16 @@
 // 	console.log('recipe.js loaded')
 // });
 
-// class Recipe {
-// 	static all = []
+class Recipe {
+	static all = []
 
-// 	constructor(id, title, description){
-// 		this.id = id
-// 		this.title = title
-// 		this.description = description
+	constructor(id, title, description){
+		this.id = id
+		this.title = title
+		this.description = description
 
-// 		Recipe.all.push(this)
-// 	}
+		Recipe.all.push(this)
+	}
 
 
 
@@ -25,5 +25,5 @@
 // 	}
 
 
-// }
+}
 
