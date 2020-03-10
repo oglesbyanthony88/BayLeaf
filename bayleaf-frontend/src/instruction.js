@@ -1,10 +1,16 @@
+document.addEventListener('DOMContentLoaded', 
+() => {
+    console.log('instruction.js loaded')
+});
+
 class Instruction{
 
 	static all = []
-	constructor(id, stepNum, content, recipeId){	this.id = id
-	this.stepNum = step_num
+	constructor({id, step_num, content, recipeId}){	
+	this.id = id
+	this.step_num = step_num
 	this.content = content
-	this.recipeId = recipe.id
+	this.recipeId = recipeId
 
 	Instruction.all.push(this)
 	}

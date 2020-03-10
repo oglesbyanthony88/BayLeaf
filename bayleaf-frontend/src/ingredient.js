@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', 
+() => {
+    console.log('ingredient.js loaded')
+});
+
 class Ingredient{
 
 	static all = []
@@ -6,7 +11,7 @@ class Ingredient{
 		this.id = id
 		this.item = item
 		this.amount = amount
-		this.recipeId = recipe.id
+		this.recipeId = recipeId
 
 		Ingredient.all.push(this)
 	}
