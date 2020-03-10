@@ -3,6 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #9DA2AD;
+    display: grid;
+    grid-template-areas: 
+    "topbar menu"
+    "image content"
+    "footer";
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
   
   header {
@@ -13,59 +21,20 @@ body {
   
   header h2 {
     padding: 10px;
-    margin: 0;
+    margin: auto;
   }
   
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
-    padding-top: 10px;
-    padding-bottom: 30px;
+  div.menu {
+    grid-area: menu;
+
   }
   
-  div.card {
+  div.recipe {
+    grid-area: content;
     background-color: #E7E8EB;
     height: 250px;
-    width: 300px;
-    box-shadow: 10px 10px white;
+    max-width: 500px;
+    margin: auto;
     padding: 10px;
     border-radius: 10px;
-  }
-  
-  p {
-    font-size: 1.5em;
-    color: black;
-    font-family: Helvetica;
-  }
-  
-  li {
-    font-size: 1.05em;
-    list-style: none;
-    padding-right: 20px;
-  }
-  
-  button {
-    font-size: .65em;
-    color: #fff;
-    background-color: green;
-    border-radius: 10px;
-  }
-  
-  button.release {
-    float: right;
-    background-color: #E1332D;
-  }
-  
-  @media only screen and (min-width: 500px) {
-    main {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  @media only screen and (min-width: 850px) {
-    main {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
   }

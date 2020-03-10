@@ -10,20 +10,22 @@ class Recipe {
 		this.title = title
 		this.description = description
 
+		this.element = document.createElement('div')
+		this.element.className = "recipe"
+		this.element.id = `recipe-${this.id}`
+
 		Recipe.all.push(this)
 	}
 
-
-
-// 	static renderRecipes(){
-// 		Recipe.all.forEach(recipe => {
-// 			let option = document.createElement("option")
-// 			option.value = recipe.id
-// 			option.textContent = recipe.title
-// 			select.appendChild(option)
-// 		})
-// 	}
-
+	fullRender(){
+		console.log('render render');
+		this.element.innerHTML = `
+		<h1>${this.title}</h1>
+		<p>${this.description}</p>
+		`
+		
+		return this.element
+	}
 
 }
 
