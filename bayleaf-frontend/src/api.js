@@ -10,12 +10,25 @@ class Api {
 		fetch(Api.baseURL + '/recipes')
 		.then(res => res.json())
 		.then(resObj => {
-			resObj.data.forEach(recipeObj => {
-				let sanitized = {...recipeObj.attributes, id: recipeObj.id}
-				new Recipe(sanitized)
-			})
+			resObj.data.forEach(this.sanitizeAndAddRecipe)
 		})
 		.then(() => console.log(Recipe.all))
+	}
+
+	static newRecipe(recipeObj){
+		let configObj = {
+			method: "POST",
+			headers: {"Content-Type": "application/json", "Accepts": "application/json"},
+			body: JSON.stringify(recipeObj)
+		}
+		fetch(this.baseURL + '/recipes', configObj)
+		.then(res => res.json())
+		.then(this.sanitizeAndAddRecipe)
+	}
+
+	static sanitizeAndAddRecipe(recipeObj){
+		let sanitized = {...recipeObj.attributes, id: recipeObj.id}
+		new Recipe(sanitized)
 	}
 
 	static fetchIngredients(){

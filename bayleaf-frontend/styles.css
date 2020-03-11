@@ -53,5 +53,10 @@ body {
     position: relative;
     left: 250px;
     bottom: 180px;
+  }
 
+  div.new-recipe {
+    margin-top: 30px;
+    background-color: #E7E8EB;
+    border-radius: 5px;
   }
