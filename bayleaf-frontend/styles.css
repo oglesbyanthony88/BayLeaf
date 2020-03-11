@@ -3,14 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #9DA2AD;
-    display: grid;
-    grid-template-areas: 
-    "topbar menu"
-    "image content"
-    "footer";
-    grid-gap: 20px;
-    padding-top: 10px;
-    padding-bottom: 30px;
   }
   
   header {
@@ -23,18 +15,43 @@ body {
     padding: 10px;
     margin: auto;
   }
+
   
   div.menu {
-    grid-area: menu;
+  }
 
+  span {
+    background-color: #E7E8EB;
+    height: 10px;
+    width: 30px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 4px;
   }
   
   div.recipe {
-    grid-area: content;
+    margin-top: 25px;
     background-color: #E7E8EB;
-    height: 250px;
-    max-width: 500px;
-    margin: auto;
-    padding: 10px;
     border-radius: 10px;
+    
+  }
+
+  div.recipe img {
+    margin-top: ;
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+
+  div.recipe h1 {
+    position: relative;
+    left: 250px;
+    bottom: 200px;
+  }
+
+  div.recipe p {
+    position: relative;
+    left: 250px;
+    bottom: 180px;
+
   }

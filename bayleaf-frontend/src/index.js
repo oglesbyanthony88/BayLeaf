@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', 
 () => {
     console.log('index.js loaded')
+    renderAllRecipes()
 });
 
 
@@ -18,10 +19,14 @@ const menu = document.getElementById('menu')
 menu.addEventListener('click', handleMenuClick)
 
 function handleMenuClick(event){
-    if (event.target.id === "all-recipes"){
-       renderAllRecipes()
+    if (event.target.id !== menu){
+       callbacks[`${event.target.id}`]()
        // debugger
     }
+}
+
+const callbacks= {
+    allRecipes: renderAllRecipes
 }
 
 function renderAllRecipes(){
@@ -31,3 +36,5 @@ function renderAllRecipes(){
     })
     // title, description
 }
+
+

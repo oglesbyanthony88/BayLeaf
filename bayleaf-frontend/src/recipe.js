@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 class Recipe {
 	static all = []
 
-	constructor({id, title, description}){
+	constructor({id, title, description, img_src}){
 		this.id = id
 		this.title = title
 		this.description = description
+		this.img_src = img_src
 
 		this.element = document.createElement('div')
 		this.element.className = "recipe"
@@ -18,14 +19,14 @@ class Recipe {
 	}
 
 	fullRender(){
-		console.log('render render');
 		this.element.innerHTML = `
+		<img src="${this.img_src}" alt="${this.description}">
 		<h1>${this.title}</h1>
 		<p>${this.description}</p>
 		`
 		
 		return this.element
 	}
-
 }
+
 
