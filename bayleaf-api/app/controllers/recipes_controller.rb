@@ -12,14 +12,14 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		newRecipe = Recipe.create(title: params['title'], description: params['description'])
+		newRecipe = Recipe.create(recipe_params)
 		render json: RecipeSerializer.new(newRecipe)
 	end
 
 	private
 
 	def recipe_params
-		params.require(:user).permit(:title, :description)
+		params.require(:user).permit(:image, :title, :description)
 	end
 
 
