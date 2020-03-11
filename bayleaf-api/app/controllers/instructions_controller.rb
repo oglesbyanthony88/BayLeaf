@@ -5,6 +5,11 @@ class InstructionsController < ApplicationController
 		render json: InstructionSerializer.new(instructions)
 	end
 
+	def create
+		newInstruction = Instruction.new(instruction_params)
+		render json: InstructionSerializer.new(newInstruction)
+	end
+
 private
 
 	def instruction_params

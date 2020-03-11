@@ -19,8 +19,9 @@ class RecipesController < ApplicationController
 	private
 
 	def recipe_params
-		params.require(:user).permit(:image, :title, :description)
+		params.require(:recipe).permit(:img_src, :title, :description)
 	end
+
 
 
 end

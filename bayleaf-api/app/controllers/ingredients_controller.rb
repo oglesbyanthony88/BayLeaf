@@ -5,6 +5,12 @@ class IngredientsController < ApplicationController
 		render json: IngredientSerializer.new(ingredients)
 	end
 
+	def create
+		newIngredient = Ingredient.new(ingredient_params)
+		render json: IngredientSerializer.new(newIngredient)
+	end
+
+
 
 private
 
